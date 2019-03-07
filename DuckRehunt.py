@@ -116,16 +116,16 @@ def main():
 		
 		dSprites.draw(screen)
 		setSprites.draw(screen)
-		screen.blit(scoreboard, (530,410))
-		screen.blit(timestamp,(290,410))
-		screen.blit(ammoboard,(40,410))
+		screen.blit(scoreboard, (530,420))
+		screen.blit(timestamp,(290,420))
+		screen.blit(ammoboard,(40,420))
 		flash.draw(screen)
 		crosshair.draw(screen)
 		pygame.display.flip()
 		if time<=0 or ammo<=0:
 			pygame.draw.rect(screen,(255,255,255),(228,98,204,54))
 			pygame.draw.rect(screen,(0,0,0),(230,100,200,50))
-			screen.blit((pygame.font.Font("duckhunt.ttf",30)).render("GAME OVER",False,(255,255,255)),(240,100))
+			screen.blit((pygame.font.Font("duckhunt.ttf",30)).render("GAME OVER",False,(255,255,255)),(240,112))
 			pygame.display.flip()
 			pygame.time.wait(1000)
 			keepGoing=False
